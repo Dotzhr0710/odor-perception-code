@@ -8,13 +8,13 @@ This package contains the code and data assets for the full CaReOR setting repor
 |---|---:|---:|
 | Full CaReOR | 0.8779 +/- 0.0002 | 0.2998 +/- 0.0020 |
 
-![Full CaReOR framework](framework_overview.jpg)
+![Full CaReOR framework](img/framework_overview.jpg)
 
 ## Concept
 
 The model is built around a simple assumption: the OR activity pattern is a useful intermediate level between molecule and percept. A molecular graph tells us about chemical structure, but the receptor spectrum gives a more direct view of how that molecule may be organized before perceptual readout. CaReOR keeps this receptor-side representation visible and processes it in a controlled way.
 
-![Biological motivation](biological_motivation.png)
+![Biological motivation](img/biological_motivation.png)
 
 The full model adds three operations around the OR spectrum:
 

@@ -1,0 +1,90 @@
+{
+  "format": 1,
+  "part_size_bytes": 6291456,
+  "assets": [
+    {
+      "path": "mian-code/data/datasets/M2OR_original_mol_OR_pairs.csv",
+      "size": 17208864,
+      "sha256": "dfeb583a0973b68e0ba8e39abc000657f47e019d4cfd2150f5a80439a1bc2593",
+      "parts": [
+        {
+          "path": "mian-code/data/datasets/M2OR_original_mol_OR_pairs.csv.part001",
+          "size": 6291456,
+          "sha256": "e4ac8dc137a084d88da024e4b2c123405db8e909cc846b00f41870757ca8e23a"
+        },
+        {
+          "path": "mian-code/data/datasets/M2OR_original_mol_OR_pairs.csv.part002",
+          "size": 6291456,
+          "sha256": "7a0c957cb4b73eb9259a98f74a75f3dfb1228880ea1f9eedccd78f10fc43a168"
+        },
+        {
+          "path": "mian-code/data/datasets/M2OR_original_mol_OR_pairs.csv.part003",
+          "size": 4625952,
+          "sha256": "23b89b471aa9bcc73635cb62ddbb3a983b4e64d838433c4abd7cb1c078bb9909"
+        }
+      ]
+    },
+    {
+      "path": "mian-code/data/datasets/NaNs_GS_LF_isomeric_SMILES_dedup_odor_filtered.csv",
+      "size": 2334407,
+      "sha256": "b2d5ea14cf601d25ae84dd6c52b06967475768741c81b578e9d0ed6a9afda2ee"
+    },
+    {
+      "path": "mian-code/data/datasets/full_1237_ORs_logits.pt",
+      "size": 29006429,
+      "sha256": "b49a9f25d8f87a3185cb44b1f7cb25ffe76930c2c30f0661df05c36b31fc1e00",
+      "parts": [
+        {
+          "path": "mian-code/data/datasets/full_1237_ORs_logits.pt.part001",
+          "size": 6291456,
+          "sha256": "8e0b995cd9fdbe50bc80d517b8fe6e9d5133edae6edb8bcbb5a8e625b6f10b93"
+        },
+        {
+          "path": "mian-code/data/datasets/full_1237_ORs_logits.pt.part002",
+          "size": 6291456,
+          "sha256": "dd7b694bff70e27d35523b74546c43454de3bf58469cd1575914be0eee7d4ef9"
+        },
+        {
+          "path": "mian-code/data/datasets/full_1237_ORs_logits.pt.part003",
+          "size": 6291456,
+          "sha256": "7a32970ff30f94c9e31715f5aa502eb4594558537361a563544efd1c8533ea5b"
+        },
+        {
+          "path": "mian-code/data/datasets/full_1237_ORs_logits.pt.part004",
+          "size": 6291456,
+          "sha256": "8d2bf031346828070fec899010363441f319786821fe77d5f998c6cf9bf67346"
+        },
+        {
+          "path": "mian-code/data/datasets/full_1237_ORs_logits.pt.part005",
+          "size": 3840605,
+          "sha256": "38f2802710dce26b04ed10bc40b2644a2bd6e21cf718d7adf1750d8200b5d25b"
+        }
+      ]
+    },
+    {
+      "path": "mian-code/runs/three_d/gslf_3d_features.csv",
+      "size": 4763363,
+      "sha256": "604fb770c4c12c1e763d895d5478a8da3f043112980699e1d66b3ffaae0b20f8"
+    },
+    {
+      "path": "morvalue.csv",
+      "size": 1224531,
+      "sha256": "4625e5b76bdfe67f268f7e7bafe796d0b6d0ca74ccc43112994589226d1fb777"
+    },
+    {
+      "path": "img/framework_overview.jpg",
+      "size": 613091,
+      "sha256": "a64c0bb5534bc62ede81359a9cc4ca10a22e35e8512405286668f0f510feaff0"
+    },
+    {
+      "path": "img/biological_motivation.png",
+      "size": 660911,
+      "sha256": "736c1715315f78a0e4bc08f3ee330d487405564ebdafc1fb87923517a55ccb59"
+    },
+    {
+      "path": "mian-code/data/checkpoints/graph_encoder_readout.pth",
+      "size": 683783,
+      "sha256": "edb0a34511d4ed661e4396e968ad73032de00296a06dc63e814ae18dad15e33c"
+    }
+  ]
+}

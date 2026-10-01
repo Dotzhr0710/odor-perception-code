@@ -1,0 +1,55 @@
+{
+  "protocol": "careor_tnnls",
+  "seeds": [
+    7,
+    32,
+    42,
+    63
+  ],
+  "main_arms": [
+    "graph_only",
+    "raw_or",
+    "m1_or",
+    "m1_or_3d",
+    "full"
+  ],
+  "main_full_recipe": "staged_best_complete_model",
+  "joint": {
+    "optimizer": "Adam",
+    "learning_rate": 0.02,
+    "weight_decay": 0,
+    "max_epochs": 1000,
+    "patience": 30,
+    "batch_size": 128,
+    "selection": "validation_roc_auc_strict_improvement_earliest_tie",
+    "include_epoch_zero": false
+  },
+  "staged": {
+    "optimizer": "AdamW",
+    "warmup_epochs": 100,
+    "m1_epochs": 40,
+    "adapt_epochs": 60,
+    "patience": 20,
+    "batch_size": 128,
+    "readout_learning_rate": 0.0003,
+    "adapt_learning_rate": 0.0001,
+    "m1_learning_rate": 0.0008,
+    "weight_decay": 0.0001,
+    "m1_bias_energy_weight": 0.00001,
+    "gradient_clip_norm": 5,
+    "selection": "validation_roc_auc_strict_improvement_earliest_tie",
+    "include_epoch_zero": true,
+    "backbone": "fixed_graph_encoder_and_readout",
+    "properties": "precomputed_z"
+  },
+  "staged_loss": {
+    "micro_bce_weight": 0.55,
+    "macro_bce_weight": 0.45,
+    "balanced_macro_bce_weight": 0,
+    "pairwise_auc_weight": 0
+  },
+  "canonical_backbone_sha256": "edb0a34511d4ed661e4396e968ad73032de00296a06dc63e814ae18dad15e33c",
+  "historical_morvalue_sha256": "4625e5b76bdfe67f268f7e7bafe796d0b6d0ca74ccc43112994589226d1fb777",
+  "smoke_epochs_per_phase": 2,
+  "test_used_for_selection": false
+}

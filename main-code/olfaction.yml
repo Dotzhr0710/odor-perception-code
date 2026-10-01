@@ -1,0 +1,24 @@
+# Optional environment for regenerating OR spectra with ESM embeddings.
+name: careor-or
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  - python=3.8.16
+  - pip=23.1.2
+  - pip:
+      - --extra-index-url https://download.pytorch.org/whl/cu118
+      - --find-links https://data.dgl.ai/wheels/cu118/repo.html
+      - torch==2.0.1+cu118
+      - dgl==1.1.0+cu118
+      - dgllife==0.3.2
+      - numpy==1.24.3
+      - pandas==2.0.2
+      - scipy==1.10.1
+      - scikit-learn==1.2.2
+      - rdkit==2023.3.1
+      - networkx==2.8.4
+      - hyperopt==0.2.7
+      - tqdm==4.65.0
+      - fair-esm==2.0.0
+      - transformers==4.31.0

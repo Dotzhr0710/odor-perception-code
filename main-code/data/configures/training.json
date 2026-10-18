@@ -1,0 +1,47 @@
+{
+  "protocol": "careor_full_v3",
+  "seeds": [
+    7,
+    32,
+    42,
+    63
+  ],
+  "workflow": "per_seed_gcn_pretraining_then_full_careor",
+  "main_full_recipe": "staged_best_complete_model",
+  "backbone": {
+    "optimizer": "Adam",
+    "learning_rate": 0.02,
+    "weight_decay": 0,
+    "max_epochs": 1000,
+    "patience": 30,
+    "batch_size": 128,
+    "selection": "validation_roc_auc_strict_improvement_earliest_tie",
+    "include_epoch_zero": false
+  },
+  "staged": {
+    "optimizer": "AdamW",
+    "warmup_epochs": 100,
+    "m1_epochs": 40,
+    "adapt_epochs": 60,
+    "patience": 20,
+    "batch_size": 128,
+    "readout_learning_rate": 0.0003,
+    "adapt_learning_rate": 0.0001,
+    "m1_learning_rate": 0.0008,
+    "weight_decay": 0.0001,
+    "m1_bias_energy_weight": 1e-05,
+    "gradient_clip_norm": 5,
+    "selection": "validation_roc_auc_strict_improvement_earliest_tie",
+    "include_epoch_zero": true,
+    "backbone": "per_seed_graph_only_validation_selected_frozen",
+    "properties": "current_train_median_iqr_clip4"
+  },
+  "staged_loss": {
+    "micro_bce_weight": 0.55,
+    "macro_bce_weight": 0.45,
+    "balanced_macro_bce_weight": 0,
+    "pairwise_auc_weight": 0
+  },
+  "smoke_epochs_per_phase": 2,
+  "test_used_for_selection": false
+}

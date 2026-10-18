@@ -1,0 +1,258 @@
+{
+  "minimum_molecules": 20,
+  "minimum_evaluable_labels": 10,
+  "families": [
+    {
+      "family": "aromatic",
+      "smarts": "[a]",
+      "description": "Contains at least one aromatic atom."
+    },
+    {
+      "family": "aromatic_heterocycle",
+      "smarts": "[n,o,s;r]",
+      "description": "Contains an aromatic ring heteroatom."
+    },
+    {
+      "family": "nonaromatic_heterocycle",
+      "smarts": "[!#6;R;!a]",
+      "description": "Contains a non-aromatic ring heteroatom."
+    },
+    {
+      "family": "aliphatic_alcohol",
+      "smarts": "[CX4;!$(C=O)][OX2H]",
+      "description": "Contains a non-aromatic carbon-bound hydroxyl group."
+    },
+    {
+      "family": "phenol",
+      "smarts": "[c][OX2H]",
+      "description": "Contains a phenolic hydroxyl group."
+    },
+    {
+      "family": "ether",
+      "smarts": "[OD2]([#6;!$(C=O)])[#6;!$(C=O)]",
+      "description": "Contains a non-ester carbon-oxygen-carbon ether linkage."
+    },
+    {
+      "family": "aldehyde",
+      "smarts": "[CX3H1](=O)[#6]",
+      "description": "Contains an aldehyde carbonyl."
+    },
+    {
+      "family": "ketone",
+      "smarts": "[#6][CX3](=O)[#6]",
+      "description": "Contains a ketone carbonyl."
+    },
+    {
+      "family": "carboxylic_acid",
+      "smarts": "[CX3](=O)[OX2H1]",
+      "description": "Contains a carboxylic acid."
+    },
+    {
+      "family": "ester",
+      "smarts": "[CX3](=O)[OX2][#6]",
+      "description": "Contains a carboxylic ester."
+    },
+    {
+      "family": "amine",
+      "smarts": "[NX3;H2,H1,H0;!$(N-C=O);!$(N-[S,P]=O)]",
+      "description": "Contains an amine-like trivalent nitrogen excluding amides."
+    },
+    {
+      "family": "amide",
+      "smarts": "[CX3](=O)[NX3]",
+      "description": "Contains an amide."
+    },
+    {
+      "family": "nitrile",
+      "smarts": "[CX2]#N",
+      "description": "Contains a nitrile."
+    },
+    {
+      "family": "alkene",
+      "smarts": "[CX3]=[CX3]",
+      "description": "Contains a carbon-carbon double bond."
+    },
+    {
+      "family": "sulfur_containing",
+      "smarts": "[#16]",
+      "description": "Contains at least one sulfur atom."
+    },
+    {
+      "family": "halogenated",
+      "smarts": "[F,Cl,Br,I]",
+      "description": "Contains fluorine, chlorine, bromine, or iodine."
+    }
+  ],
+  "reference_mode": "published_rounded_reference",
+  "reference": {
+    "aromatic": {
+      "display_name": "Aromatic compounds",
+      "molecules": 237,
+      "evaluable_labels": 123,
+      "roc_auc": {
+        "mean": 0.8039,
+        "std": 0.0047
+      },
+      "pr_auc": {
+        "mean": 0.2441,
+        "std": 0.0108
+      }
+    },
+    "aromatic_heterocycle": {
+      "display_name": "Aromatic heterocycles",
+      "molecules": 37,
+      "evaluable_labels": 67,
+      "roc_auc": {
+        "mean": 0.8189,
+        "std": 0.0123
+      },
+      "pr_auc": {
+        "mean": 0.4151,
+        "std": 0.0275
+      }
+    },
+    "nonaromatic_heterocycle": {
+      "display_name": "Non-aromatic heterocycles",
+      "molecules": 61,
+      "evaluable_labels": 73,
+      "roc_auc": {
+        "mean": 0.856,
+        "std": 0.0054
+      },
+      "pr_auc": {
+        "mean": 0.3521,
+        "std": 0.0172
+      }
+    },
+    "aliphatic_alcohol": {
+      "display_name": "Aliphatic alcohols",
+      "molecules": 74,
+      "evaluable_labels": 90,
+      "roc_auc": {
+        "mean": 0.8343,
+        "std": 0.0075
+      },
+      "pr_auc": {
+        "mean": 0.3008,
+        "std": 0.0206
+      }
+    },
+    "ether": {
+      "display_name": "Ethers",
+      "molecules": 150,
+      "evaluable_labels": 107,
+      "roc_auc": {
+        "mean": 0.8534,
+        "std": 0.0054
+      },
+      "pr_auc": {
+        "mean": 0.2958,
+        "std": 0.0099
+      }
+    },
+    "aldehyde": {
+      "display_name": "Aldehydes",
+      "molecules": 30,
+      "evaluable_labels": 51,
+      "roc_auc": {
+        "mean": 0.817,
+        "std": 0.0152
+      },
+      "pr_auc": {
+        "mean": 0.4592,
+        "std": 0.022
+      }
+    },
+    "ketone": {
+      "display_name": "Ketones",
+      "molecules": 70,
+      "evaluable_labels": 87,
+      "roc_auc": {
+        "mean": 0.7888,
+        "std": 0.0101
+      },
+      "pr_auc": {
+        "mean": 0.3009,
+        "std": 0.0058
+      }
+    },
+    "carboxylic_acid": {
+      "display_name": "Carboxylic acids",
+      "molecules": 22,
+      "evaluable_labels": 28,
+      "roc_auc": {
+        "mean": 0.8656,
+        "std": 0.0278
+      },
+      "pr_auc": {
+        "mean": 0.4537,
+        "std": 0.0483
+      }
+    },
+    "ester": {
+      "display_name": "Esters",
+      "molecules": 253,
+      "evaluable_labels": 128,
+      "roc_auc": {
+        "mean": 0.795,
+        "std": 0.0046
+      },
+      "pr_auc": {
+        "mean": 0.2226,
+        "std": 0.0153
+      }
+    },
+    "amine": {
+      "display_name": "Amines",
+      "molecules": 34,
+      "evaluable_labels": 47,
+      "roc_auc": {
+        "mean": 0.8601,
+        "std": 0.0205
+      },
+      "pr_auc": {
+        "mean": 0.4072,
+        "std": 0.0368
+      }
+    },
+    "alkene": {
+      "display_name": "Alkenes",
+      "molecules": 209,
+      "evaluable_labels": 120,
+      "roc_auc": {
+        "mean": 0.7974,
+        "std": 0.0031
+      },
+      "pr_auc": {
+        "mean": 0.2429,
+        "std": 0.0028
+      }
+    },
+    "sulfur_containing": {
+      "display_name": "Sulfur-containing compounds",
+      "molecules": 64,
+      "evaluable_labels": 72,
+      "roc_auc": {
+        "mean": 0.7704,
+        "std": 0.0041
+      },
+      "pr_auc": {
+        "mean": 0.2584,
+        "std": 0.0128
+      }
+    },
+    "overall": {
+      "display_name": "Overall",
+      "molecules": 586,
+      "evaluable_labels": 150,
+      "roc_auc": {
+        "mean": 0.8565,
+        "std": 0.0025
+      },
+      "pr_auc": {
+        "mean": 0.2496,
+        "std": 0.0008
+      }
+    }
+  }
+}

@@ -1,4 +1,4 @@
-# Full CaReOR
+# CaReOR
 
 CaReOR predicts odor descriptors using a predicted olfactory receptor (OR) activity spectrum as an intermediate representation. Molecular Calibration adjusts the overall activation tendency of this spectrum using molecular descriptors. The calibrated spectrum is then encoded and integrated with molecular graph and aggregated 3D geometry representations before perceptual readout.
 
